@@ -28,9 +28,10 @@ app.post('/hello', (req , res) => {
     res.cookie('username', req.body.username);
     res.redirect('/');
 });
+
 app.post('/goodbye', (req , res) => {
     res.clearCookie('username')
-    res.redirect('/');
+    res.redirect('/hello');
 });
 
 app.listen(3000, () =>{
