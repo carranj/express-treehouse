@@ -5,3 +5,4 @@
 * [Express v4.17.1](https://expressjs.com/)
     *  The version that the tutorial uses is 4.15, but I used the latest 4.17
 * NPM and NodeJS
+* Nodemon
