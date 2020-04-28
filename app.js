@@ -1,9 +1,11 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const cookierParser = require('cookie-parser');
 
 const app = express();
 
 app.use(bodyParser.urlencoded({extended:false}));
+app.use(cookierParser());
 
 app.set('view engine', 'pug');
 
@@ -16,10 +18,11 @@ app.get('/cards', (req , res) => {
 });
 
 app.get('/hello', (req , res) => {
-    res.render('hello');
+    res.render('hello', {name: req.cookies.username});
 });
 
 app.post('/hello', (req , res) => {
+    res.cookie('username', req.body.username);
     res.render('hello', {name: req.body.username});
 });
 
