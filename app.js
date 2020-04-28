@@ -8,8 +8,9 @@ app.get('/', (req , res) => {
     res.render('index');
 });
 
-app.get('/hello', (req , res) => {
-    res.send("<h1>Hello, JavaScript Developer!</h1>");
+app.get('/cards', (req , res) => {
+    res.locals.prompt = "Who is buried in Grant's tomb";
+    res.render('card', {prompt: "Who is buried in Grant's tomb", hint: "Think about whose tomb it is."});
 });
 
 app.listen(3000, () =>{
