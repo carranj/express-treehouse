@@ -6,3 +6,4 @@
     *  The version that the tutorial uses is 4.15, but I used the latest 4.17
 * NPM and NodeJS
 * Nodemon
+* [Pug](https://pugjs.org/)
