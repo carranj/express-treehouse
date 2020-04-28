@@ -8,6 +8,14 @@ app.get('/', (req , res) => {
     res.render('index');
 });
 
+app.get('/hello', (req , res) => {
+    res.render('hello');
+});
+
+app.post('/hello', (req , res) => {
+    res.render('hello');
+});
+
 app.get('/cards', (req , res) => {
     res.locals.prompt = "Who is buried in Grant's tomb";
     res.render('card', {prompt: "Who is buried in Grant's tomb"});
