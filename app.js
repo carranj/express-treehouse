@@ -10,15 +10,17 @@ app.use(cookierParser());
 app.set('view engine', 'pug');
 
 app.use( (req, res, next) => {
-    req.message = "This message made it!";
-    next();
+    console.log("Hello");
+    const err = new Error("Oh noes!");
+    next(err);
 });
 
 app.use((req, res, next) => {
-    console.log(req.message);
+    console.log("World!");
     next();
 });
  
+
 
 
 app.get('/', (req , res) => {
